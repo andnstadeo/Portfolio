@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work Form</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <section class="work-container">
+        <form id="operation-form">
+            <label for="operation">Choose an operation to perform:</label>
+            <select id="operation" name="operation">
+                <option value="../templates/circle.html">Area of a Circle</option>
+                <option value="../templates/triangle.html">Area of a Triangle</option>
+                <option value="../templates/touppercase.html">Convert String to Uppercase</option>
+                <option value="../templates/pup_hymn.html">PUP Hymn</option>
+                <option value="../templates/calculator.html">Simple Calculator</option>
+
+            </select>
+            <br>
+            <button type="submit" class="submit-btn">Select</button>
+        </form>
+        <a href="../templates/index.html" class="back-to-home">Back to Home</a>
+    </section>
+
+    <script>
+        document.getElementById('operation-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent actual form submission
+            const selectedPage = document.getElementById('operation').value;
+            window.location.href = selectedPage; // Redirect to selected HTML page
+        });
+    </script>
+</body>
+</html>
